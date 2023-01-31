@@ -127,8 +127,8 @@ def get_videos(search_term):
 
 import os
 
-from PIL import Image, ImageTk
-import cv2,numpy
+#from PIL import Image, ImageTk
+#import cv2,numpy
 import os
  
 import requests
@@ -142,15 +142,15 @@ from django.shortcuts import render ,redirect
 global key
 def visual(request):
       file = request.FILES["f"]
-      f = file.read()
-      np_array = numpy.asarray(bytearray(f),dtype="uint8")
-      np_array = cv2.imdecode(np_array,cv2.IMREAD_COLOR)
-      np_array = cv2.resize(np_array,(512,512))
-      cv2.imwrite("s.jpg",np_array)
-      img = {'file':open("s.jpg",'rb')}
-      response = requests.post("http://127.0.0.1:8000",files=img)
-      print(response.json())
-      return render(request, 'visual.html',{'results':response.json()})
+      #f = file.read()
+      #np_array = numpy.asarray(bytearray(f),dtype="uint8")
+      #np_array = cv2.imdecode(np_array,cv2.IMREAD_COLOR)
+      #np_array = cv2.resize(np_array,(512,512))
+      #cv2.imwrite("s.jpg",np_array)
+      #img = {'file':open("s.jpg",'rb')}
+      #response = requests.post("http://127.0.0.1:8000",files=img)
+      #print(response.json())
+      return render(request, 'visual.html',{'results':"img"})
 
 
 def home(request):
