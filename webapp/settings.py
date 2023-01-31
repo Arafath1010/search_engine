@@ -29,9 +29,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 SECRET_KEY = 'use ur key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['searchengine-production.up.railway.app']
 
 
 # Application definition
@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 
 ]
-STATIC_ROOT = os.path.join( BASE_DIR,'staticfiles')
+#STATIC_ROOT = os.path.join( BASE_DIR,'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
